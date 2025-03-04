@@ -1,0 +1,73 @@
+.btn {
+  @include btn-caption-14-Sb;
+  position: relative;
+  padding: rem(16) rem(14) rem(14) rem(29);
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: rem(40);
+  color: var(--white-100-base);
+  border: 1px solid var(--black-100-base);
+  background-color: var(--black-100-base);
+  transition: var(--transition);
+  border-radius: 50px;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    width: rem(20);
+    aspect-ratio: 1;
+    background-color: var(--white-100-base);
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.9113 9.03574L8.8825 3.86346L10.2081 2.5L17.5 10L10.2081 17.5L8.8825 16.1365L13.9113 10.9643H2.5V9.03574H13.9113Z' fill='%23000000'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.9113 9.03574L8.8825 3.86346L10.2081 2.5L17.5 10L10.2081 17.5L8.8825 16.1365L13.9113 10.9643H2.5V9.03574H13.9113Z' fill='%23000000'/%3E%3C/svg%3E");
+    transition: var(--transition);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--black-100-base);
+    border: 1px solid var(--teal-100-base);
+    background-color: var(--teal-100-base);
+    &::after {
+      background-color: var(--black-100-base);
+    }
+  }
+
+  &.white {
+    background-color: var(--white-100-base);
+    border: 1px solid var(--white-100-base);
+    color: var(--black-100-base);
+    height: max-content;
+
+    &::after {
+      background-color: var(--black-100-base);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--black-100-base);
+      border: 1px solid var(--teal-100-base);
+      background-color: var(--teal-100-base);
+      &::after {
+        background-color: var(--black-100-base);
+      }
+    }
+  }
+}
+
+.tab-btn {
+  @include menu-item-14-M;
+  padding: rem(9) rem(13) rem(7) rem(12);
+  background: var(--black-10-light);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  border-radius: 6px;
+  transition: var(--transition);
+
+  &.active {
+    color: var(--white-100-base);
+    background: var(--black-100-base);
+  }
+}

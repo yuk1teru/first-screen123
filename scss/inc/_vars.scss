@@ -1,0 +1,300 @@
+@use 'sass:math' as *;
+@use 'sass:list' as *;
+
+:root {
+  // Red
+  --error-red: #d54141;
+  // Beige
+  --beige-100-base: #f5f3ed;
+  --beige-90-mobile-link-only: #e9e5d8;
+  --beige-80-mobile-link-only: #dad4be;
+  --beige-50-dark: #af9f6e;
+  --beige-10-darkest: #4f462b;
+  // Black
+  --black-100-base: #2d2d2d;
+  --black-70: #707070;
+  --black-10-light: #ebebeb;
+  // Gray Warm
+  --gray-warm-100-base: #d9d7cf;
+  --gray-warm-90: #c9c6ba;
+  --gray-warm-40-blog-text: #676251;
+  // White
+  --white-100-base: #ffffff;
+  // Teal
+  --teal-100-base: #62d9cf;
+  --teal-40-dark: #10423e;
+  --teal-75-vivid: #2cb5a9;
+  // Lime
+  --lime-100-base: #b5e573;
+  --lime-80-vivid: #93d930;
+  // Pink
+  --pink-100-base: #f291cb;
+  --pink-70-vivid: #da3b9b;
+  // Orange
+  --orange-100-base: #f2856d;
+  --orange-85-vivid: #ef6343;
+  // Transition
+  --transition: all 0.3s ease 0s;
+  // Sub menu color
+  --sub-menu-color-header: transparent;
+}
+
+@function rem($value) {
+  $remValue: div($value, 16) + rem;
+  @return $remValue;
+}
+
+@function vw($value) {
+  $vwValue: calc(#{$value} / #{$maxWidth} * 100vw);
+  @return $vwValue;
+}
+
+$bodyFontSize: rem(16);
+$maxWidth: 1440;
+$maxContainerWidth: rem(1440);
+
+// Base text/15 M
+@mixin base-text-15-M {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: rem(15);
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+// Base text/20 M
+@mixin base-text-20-M {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: rem(20);
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+// Base text/15 B
+@mixin base-text-15-B {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: rem(15);
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+// Base text/20 B
+@mixin base-text-20-B {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: rem(20);
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+// Btn Caption/14 Sb
+@mixin btn-caption-14-Sb {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: rem(14);
+  line-height: 1.4;
+  letter-spacing: rem(calc(0.05 * 14));
+}
+
+// Menu Item/14 M
+@mixin menu-item-14-M {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: rem(14);
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+// Title/80 Sb
+@mixin title-80-Sb {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: rem(80);
+  line-height: 1;
+  letter-spacing: rem(calc(-0.03 * 80));
+}
+// Title/56 Sb
+@mixin title-56-Sb {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: rem(56);
+  line-height: 1;
+  letter-spacing: rem(calc(-0.03 * 56));
+}
+
+// Title/32 Sb
+@mixin title-32-Sb {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: rem(32);
+  line-height: 1;
+  letter-spacing: rem(calc(-0.03 * 32));
+}
+
+// Title/32 Sb Multiline
+@mixin title-32-Sb-multiline {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: rem(32);
+  line-height: 1.2;
+  letter-spacing: rem(calc(-0.03 * 32));
+}
+
+// Title/20 Sb
+@mixin title-20-Sb {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: rem(20);
+  line-height: 1.2;
+  letter-spacing: rem(calc(-0.03 * 20));
+}
+
+// Handwritten/Subtitle 20
+@mixin handwritten-subtitle-20 {
+  font-family: 'Kalam', sans-serif;
+  font-weight: 400;
+  font-size: rem(20);
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+// Subtitle/15 Sb
+@mixin subtitle-15-Sb {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: rem(15);
+  line-height: 1.05;
+  letter-spacing: rem(calc(-0.03 * 15));
+}
+
+// Subtitle/12 Tag
+@mixin subtitle-12-Tag {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: rem(12);
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+// Testimonials/24 Sb
+@mixin testimonials-24-Sb {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: rem(24);
+  line-height: 1.4;
+  letter-spacing: rem(calc(-0.04 * 24));
+}
+
+// Title Mobile/40 Sb
+@mixin title-mobile-40-Sb {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: rem(40);
+  line-height: 1;
+  letter-spacing: rem(calc(-0.03 * 40));
+}
+
+// Title Mobile/28 Sb
+@mixin title-mobile-28-Sb {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: rem(28);
+  line-height: 1;
+  letter-spacing: rem(calc(-0.03 * 28));
+}
+
+// Title Mobile/28 Sb Multiline
+@mixin title-mobile-28-Sb-multiline {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: rem(28);
+  line-height: 1.2;
+  letter-spacing: rem(calc(-0.03 * 28));
+}
+
+@mixin desktop-mdll {
+  @media (max-width: 1600) {
+    @content;
+  }
+}
+@mixin desktop-md {
+  @media (max-width: 1380px) {
+    @content;
+  }
+}
+
+@mixin tablet-md {
+  @media (max-width: 1120px) {
+    @content;
+  }
+}
+
+@mixin tablet-smm {
+  @media (max-width: 980px) {
+    @content;
+  }
+}
+
+@mixin tablet-sm {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mobile-md {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin mobile-sm {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin animatedUnderlineBefore {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+@mixin animatedUnderlineHover {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@mixin animatedUnderline {
+  position: relative;
+  width: fit-content;
+
+  &:before {
+    @include animatedUnderlineBefore;
+  }
+
+  @include hover {
+    &:before {
+      @include animatedUnderlineHover;
+    }
+  }
+
+  @content;
+}
+
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}

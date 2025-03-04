@@ -1,0 +1,122 @@
+.newsletter {
+  background-color: var(--white-100-base);
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('./../../img/subscribe-left-top.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: rem(330);
+    height: rem(130);
+
+    @include tablet-md {
+      background-image: url('./../../img/newsletter-left-top-mobile.svg');
+      width: 246px;
+      height: 147px;
+    }
+  }
+  span.after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url('./../../img/subscribe-left-bottom.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: rem(130);
+    height: rem(65);
+    @include tablet-md {
+      display: none;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('./../../img/newsletter-right-top.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: rem(106);
+    height: rem(150);
+    @include tablet-md {
+      background-image: url('./../../img/newsletter-right-top-mobile.svg');
+      width: 207px;
+      height: 102px;
+    }
+  }
+  span.before {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url('./../../img/newsletter-right-bottom.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: rem(93);
+    height: rem(113);
+    @include tablet-md {
+      background-image: url('./../../img/newsletter-right-bottom-mobile.svg');
+      width: 249px;
+      height: 208px;
+    }
+  }
+
+  @include tablet-md {
+    margin-top: rem(80);
+  }
+  &__wrapp {
+    max-width: 72.728%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: auto;
+    gap: 40px;
+    padding: 65px 0;
+    padding-bottom: rem(61);
+    @include tablet-md {
+      flex-direction: column;
+      text-align: center;
+      max-width: 94%;
+      padding: 171px 0 130.5px 0;
+      gap: 39px;
+    }
+  }
+  &__text-content {
+    max-width: 650px;
+    width: 100%;
+  }
+  &__title {
+    @include title-32-Sb;
+    text-transform: capitalize;
+    margin-bottom: rem(16);
+
+    @include tablet-md {
+      display: none;
+    }
+    &-mob {
+      display: none;
+
+      @include tablet-md {
+        @include title-mobile-28-Sb;
+        text-transform: capitalize;
+        display: block;
+        margin-bottom: rem(16);
+      }
+    }
+  }
+  &__text {
+  }
+  &__button {
+    white-space: nowrap;
+    gap: 13px;
+    @include tablet-md {
+      gap: 41px;
+    }
+  }
+}

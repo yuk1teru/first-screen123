@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+  //= parts/head
+
+  <body>
+    //= parts/header.html
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero__title">From Insight to impact</h1>
+          <p class="hero__description">
+            At Visuality we combine visuals with a human centered approach. When
+            we produce visuals, we do that in <br />
+            co-creation with people and when we work with people, we often use
+            visuals to make things clear
+          </p>
+          <div class="hero__animation-block">
+            <img class="desk" src="./../img/home-page-hero.png" alt="" />
+            <img class="mob" src="./../img/home-page-hero-mob.png" alt="" />
+          </div>
+          <button class="hero__button btn"><span>Connect with us</span></button>
+
+          <div class="hero__our-clients-title animated">
+            <span >Our Clients</span>
+            <svg
+              width="132"
+              height="45"
+              viewBox="0 0 132 45"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                id="svgPath"
+                d="M1 43.9996C3.5 19.4996 15 6.99965 25 5.99965C36.6 5.99965 26.5 29.6663 20 41.4996C29.3333 30.4996 54.2 7.99965 79 5.99965C103.8 3.99965 122 19.4996 128 27.4996C120.5 25 114.5 21 100.5 23C105.167 22.5 117 22.6 127 27C137 31.4 125.167 11.8333 118 1.5"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                stroke-dasharray="400"
+                stroke-dashoffset="400"
+              />
+            </svg>
+          </div>
+
+          <ul class="hero__our-clients our-clients">
+            <li class="our-clients__item">
+              <img src="./../img/our-clients-logo/1.svg" alt="logo" />
+            </li>
+            <li class="our-clients__item">
+              <img src="./../img/our-clients-logo/2.svg" alt="logo" />
+            </li>
+            <li class="our-clients__item">
+              <img src="./../img/our-clients-logo/3.svg" alt="logo" />
+            </li>
+            <li class="our-clients__item">
+              <img src="./../img/our-clients-logo/4.svg" alt="logo" />
+            </li>
+            <li class="our-clients__item">
+              <img src="./../img/our-clients-logo/5.svg" alt="logo" />
+            </li>
+            <li class="our-clients__item">
+              <img src="./../img/our-clients-logo/6.svg" alt="logo" />
+            </li>
+            <li class="our-clients__item">
+              <img src="./../img/our-clients-logo/7.svg" alt="logo" />
+            </li>
+            <li class="our-clients__item">
+              <img src="./../img/our-clients-logo/8.svg" alt="logo" />
+            </li>
+            <li class="our-clients__item">
+              <img src="./../img/our-clients-logo/9.svg" alt="logo" />
+            </li>
+            <li class="our-clients__item">
+              <img src="./../img/our-clients-logo/10.svg" alt="logo" />
+            </li>
+            <li class="our-clients__item">
+              <img src="./../img/our-clients-logo/11.svg" alt="logo" />
+            </li>
+            <li class="our-clients__item">
+              <img src="./../img/our-clients-logo/12.svg" alt="logo" />
+            </li>
+            <li class="our-clients__item">
+              <img src="./../img/our-clients-logo/13.svg" alt="logo" />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section
+        class="services"
+        style="
+          --services-color: var(--teal-100-base);
+          --services-second-color: var(--teal-100-base);
+        "
+      >
+        <div class="container">
+          <div class="wrapp">
+            <p class="services__message">You are looking for...</p>
+            <div class="services__tabs">
+              <button
+                class="services__tablinks tab-btn active"
+                onclick="changeColor('var(--teal-100-base)'); openService(event, 'services-1')"
+              >
+                Impactful Visual Communication
+              </button>
+              <button
+                class="services__tablinks tab-btn"
+                onclick="changeColor('var(--lime-100-base)','var(--pink-100-base)');openService(event, 'services-2')"
+              >
+                <span>Great events & meetings</span>
+              </button>
+              <button
+                class="services__tablinks tab-btn"
+                onclick="changeColor('var(--orange-100-base)');openService(event, 'services-3')"
+              >
+                Better team collaboration
+              </button>
+            </div>
+            <div id="services-1" class="services__tabcontent active">
+              <p class="services__message">You are looking for...</p>
+              <div class="services__content-wrap">
+                <div class="services__accordion-btn">
+                  <h2 class="services__title">
+                    Impactful visual communication
+                  </h2>
+                  <p class="services__descr">
+                    Transforming complex ideas into clear, engaging visuals that
+                    drive understanding and inspire action.
+                  </p>
+                </div>
+                <div class="services__menu-box">
+                  <div
+                    class="services__menu-item"
+                    style="--services-menu-color: var(--teal-100-base)"
+                  >
+                    <h3>Services</h3>
+                    <ul class="services__menu services-menu">
+                      <li class="services-menu__title">
+                        <a href="#">Strategic Infographic</a>
+                      </li>
+                      <li class="services-menu__link">
+                        <a href="#">Presentations that stick</a>
+                      </li>
+                      <li class="services-menu__link">
+                        <a href="#">Explainer videos</a>
+                      </li>
+                      <li class="services-menu__link">
+                        <a href="#">Manuals &amp; Reports</a>
+                      </li>
+                      <li class="services-menu__link">
+                        <a href="#">Data Visualization</a>
+                      </li>
+                      <li class="services-menu__link">
+                        <a href="#">Visual Thinking Training</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="services__image-side">
+                <picture>
+                  <source
+                    media="(max-width: 1120px)"
+                    srcset="./../img/service-section/service-1-mobile.png"
+                  />
+
+                  <img
+                    src="./../img/service-section/service-1.png"
+                    alt="section1"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+            </div>
+
+            <div id="services-2" class="services__tabcontent">
+              <p class="services__message">You are looking for...</p>
+              <div class="services__content-wrap">
+                <div class="services__accordion-btn">
+                  <h2 class="services__title">
+                    Great events <br />
+                    & meetings
+                  </h2>
+                  <p class="services__descr">
+                    Crafting memorable, productive events that foster
+                    connection, creativity, and lasting results.
+                  </p>
+                </div>
+                <div class="services__menu-box">
+                  <div
+                    class="services__menu-item"
+                    style="--services-menu-color: var(--services-color)"
+                  >
+                    <h3>Visual Services</h3>
+                    <ul class="services__menu services-menu">
+                      <li class="services-menu__title">
+                        <a href="#">Visual harvesting</a>
+                      </li>
+                      <li class="services-menu__link">
+                        <a href="#">Conference booklets</a>
+                      </li>
+                      <li class="services-menu__link">
+                        <a href="#">Creative signage</a>
+                      </li>
+                      <li class="services-menu__link">
+                        <a href="#">Murals & banners</a>
+                      </li>
+                      <li class="services-menu__link">
+                        <a href="#">Interactive templates & boards</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    class="services__menu-item"
+                    style="--services-menu-color: var(--services-second-color)"
+                  >
+                    <h3>Human-centered Services</h3>
+                    <ul class="services__menu services-menu">
+                      <li class="services-menu__title">
+                        <a href="#">Keynotes</a>
+                      </li>
+                      <li class="services-menu__link">
+                        <a href="#">Keynotes</a>
+                      </li>
+                      <li class="services-menu__link">
+                        <a href="#">Event facilitation</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="services__image-side">
+                <picture>
+                  <source
+                    media="(max-width: 1120px)"
+                    srcset="./../img/service-section/service-2-mobile.png"
+                  />
+
+                  <img
+                    src="./../img/service-section/service-2.png"
+                    alt="section2"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div id="services-3" class="services__tabcontent">
+              <p class="services__message">You are looking for...</p>
+              <div class="services__content-wrap">
+                <div class="services__accordion-btn">
+                  <h2 class="services__title">Better team collaboration</h2>
+                  <p class="services__descr">
+                    Enhancing team synergy through tailored coaching and tools
+                    that build trust, alignment, and effective communication
+                  </p>
+                </div>
+                <div class="services__menu-box">
+                  <div
+                    class="services__menu-item"
+                    style="--services-menu-color: var(--services-color)"
+                  >
+                    <h3>Services</h3>
+                    <ul class="services__menu services-menu">
+                      <li class="services-menu__title">
+                        <a href="#">Strategic Facilitation</a>
+                      </li>
+                      <li class="services-menu__link">
+                        <a href="#">Conflict mediation</a>
+                      </li>
+                      <li class="services-menu__link">
+                        <a href="#">Leadership &amp; team coaching</a>
+                      </li>
+                      <li class="services-menu__link">
+                        <a href="#">21th century training</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="services__image-side">
+                <picture>
+                  <source
+                    media="(max-width: 1120px)"
+                    srcset="./../img/service-section/service-3-mobile.png"
+                  />
+
+                  <img
+                    src="./../img/service-section/service-3.png"
+                    alt="section1"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="features-intro">
+        <div class="container">
+          <h2 class="features-intro__title animated">
+            <span>Why Choose Us</span>
+            <svg
+              width="292"
+              height="25"
+              viewBox="0 0 292 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                id="svgPath"
+                d="M2 22.2689C42.5 11.2689 155.5 -2.23109 143 3.26891C130.5 8.76891 101 23.7693 123 22.2689C145 20.7686 263.5 12.7686 290 12.7686"
+                stroke="#62D9CF"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-dasharray="400"
+                stroke-dashoffset="400"
+              />
+            </svg>
+          </h2>
+
+          <div class="left-center text text-animation">
+            <span>We don’t</span>
+            <span>fear challenge</span>
+          </div>
+          <div class="left-bottom text text-animation">
+            <span>Sparkling</span>
+            <span>professionalism</span>
+          </div>
+          <div class="semi-left-bottom text text-animation">
+            <span>Boldly</span>
+            <span>curious</span>
+          </div>
+          <div class="center-bottom text text-animation">
+            <span>We want to</span>
+            <span>change the world</span>
+            <span>for the better!</span>
+          </div>
+          <div class="right-bottom text text-animation">
+            <span>Co-creative</span>
+            <span>stewardship</span>
+          </div>
+          <div class="right-semi-center text text-animation">
+            <span>Consciously</span>
+            <span>ethical</span>
+          </div>
+          <div class="right-center text text-animation">
+            <span>We are</span>
+            <span>professionals</span>
+          </div>
+
+          <div class="images">
+            <picture class="collage">
+              <source
+                media="(max-width: 768px)"
+                srcset="./../img/features-intro/background-collage-mobile.png"
+              />
+
+              <img
+                src="./../img/features-intro/background-collage.png"
+                alt="collage"
+                loading="lazy"
+              />
+            </picture>
+            <picture class="ripple">
+              <source
+                media="(max-width: 768px)"
+                srcset="./../img/features-intro/ripple-mobile.png"
+              />
+
+              <img
+                src="./../img/features-intro/ripple.png"
+                alt="ripple"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <div class="container">
+          <h2 class="features__title">our Values</h2>
+          <ul class="features__list">
+            <li class="features__card">
+              <img
+                src="./../img/features-cards/1.svg"
+                alt="icon"
+                width="100"
+                height="100"
+                loading="lazy"
+              />
+              <div class="features__text-content">
+                <h3 class="features__card-title">Sparkling Professionalism</h3>
+                <p class="features__card-text">
+                  Bringing precision, expertise, and a vibrant touch to every
+                  project for top-quality, polished results.
+                </p>
+              </div>
+            </li>
+            <li class="features__card">
+              <img
+                src="./../img/features-cards/2.svg"
+                alt="icon"
+                width="100"
+                height="100"
+                loading="lazy"
+              />
+              <div class="features__text-content">
+                <h3 class="features__card-title">Consciously Ethical</h3>
+                <p class="features__card-text">
+                  Prioritizing sustainable practices and genuine connections to
+                  make a positive, responsible impact on people and the planet.
+                </p>
+              </div>
+            </li>
+            <li class="features__card">
+              <img
+                src="./../img/features-cards/3.svg"
+                alt="icon"
+                width="100"
+                height="100"
+                loading="lazy"
+              />
+              <div class="features__text-content">
+                <h3 class="features__card-title">Boldly Curious</h3>
+                <p class="features__card-text">
+                  Eagerly exploring new ideas, perspectives, and approaches,
+                  constantly evolving to meet diverse client needs.
+                </p>
+              </div>
+            </li>
+            <li class="features__card">
+              <img
+                src="./../img/features-cards/4.svg"
+                alt="icon"
+                width="100"
+                height="100"
+                loading="lazy"
+              />
+              <div class="features__text-content">
+                <h3 class="features__card-title">Co-Creative Stewardship</h3>
+                <p class="features__card-text">
+                  Partnering with clients in a collaborative <br />
+                  process, nurturing shared visions to inspire meaningful
+                  outcomes.
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="newsletter">
+            <span class="after"></span>
+            <span class="before"></span>
+            <div class="newsletter__wrapp">
+              <div class="newsletter__text-content">
+                <h3 class="newsletter__title">Ready for collaboration?</h3>
+                <h3 class="newsletter__title-mob">
+                  Ready for collaboration? <br />
+                  Book a call with us
+                </h3>
+                <p class="newsletter__text">
+                  Book a call via Calendly or reach us out with convenient
+                  contact form and we’ll discuss how we can enrich your
+                  experience with visuals and co-creation!
+                </p>
+              </div>
+              <div class="newsletter__button-wrapp">
+                <button class="newsletter__button btn">
+                  <span>Connect with us</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case">
+        <div class="container">
+          <div class="case__arrow-text animated">
+            <span> Featured Case Studies </span>
+            <svg
+              width="132"
+              height="45"
+              viewBox="0 0 132 45"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                id="svgPath"
+                d="M1 43.9996C3.5 19.4996 15 6.99965 25 5.99965C36.6 5.99965 26.5 29.6663 20 41.4996C29.3333 30.4996 54.2 7.99965 79 5.99965C103.8 3.99965 122 19.4996 128 27.4996C120.5 25 114.5 21 100.5 23C105.167 22.5 117 22.6 127 27C137 31.4 125.167 11.8333 118 1.5"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                stroke-dasharray="400"
+                stroke-dashoffset="400"
+              />
+            </svg>
+          </div>
+          <h2 class="case__title">
+            the Power of engaging Visuals in promoting and strengthening local
+            youth work communities
+          </h2>
+
+          <div class="swiper case__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  class="case__slide-img"
+                  src="./../img/case-slider/1.jpg"
+                  alt="slide1"
+                  width="870"
+                  height="400"
+                  loading="lazy"
+                />
+                <div class="case__right-side">
+                  <div class="case__info">
+                    <div class="case__info-item">
+                      <div class="case__info-title">Client</div>
+                      <div class="case__info-value">EGL</div>
+                    </div>
+                    <div class="case__info-item">
+                      <div class="case__info-title">Sector</div>
+                      <div class="case__info-value">NGO</div>
+                    </div>
+                    <div class="case__info-item">
+                      <div class="case__info-title">Related services</div>
+                      <div class="case__info-value">
+                        <span class="case__info-tag">Visual Storytelling</span>
+                        <span class="case__info-tag">Live (Event) Visuals</span>
+                      </div>
+                    </div>
+                    <div class="case__info-item">
+                      <div class="case__info-title">Theme driver</div>
+                      <div class="case__info-value">
+                        Community, Participation
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case__buttons">
+                    <a class="case__button btn"><span>Read More</span> </a>
+                    <div class="case__nav-buttons">
+                      <div class="case__button-prev"></div>
+                      <div class="case__button-next"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="case__slide-img"
+                  src="./../img/case-slider/1.jpg"
+                  alt="slide1"
+                  width="870"
+                  height="400"
+                  loading="lazy"
+                />
+                <div class="case__right-side">
+                  <div class="case__info">
+                    <div class="case__info-item">
+                      <div class="case__info-title">Client</div>
+                      <div class="case__info-value">EGL</div>
+                    </div>
+                    <div class="case__info-item">
+                      <div class="case__info-title">Sector</div>
+                      <div class="case__info-value">NGO</div>
+                    </div>
+                    <div class="case__info-item">
+                      <div class="case__info-title">Related services</div>
+                      <div class="case__info-value">
+                        <span class="case__info-tag">Visual Storytelling</span>
+                        <span class="case__info-tag">Live (Event) Visuals</span>
+                      </div>
+                    </div>
+                    <div class="case__info-item">
+                      <div class="case__info-title">Theme driver</div>
+                      <div class="case__info-value">
+                        Community, Participation
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case__buttons">
+                    <a class="case__button btn"><span>Read More</span> </a>
+                    <div class="case__nav-buttons">
+                      <div class="case__button-prev"></div>
+                      <div class="case__button-next"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="case__link" href="">View all cases</a>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="container">
+          <h2 class="testimonials__title animated">
+						
+						<span>Testimonials</span>
+						<svg width="344" height="10" viewBox="0 0 344 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 8C48 4 252.5 3.5 341.5 2" stroke="#62D9CF" stroke-width="4" stroke-linecap="round"  stroke-dasharray="400"
+                stroke-dashoffset="400"/>
+</svg>
+
+						</h2>
+        </div>
+        <div class="swiper testimonials__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonials__text-wrapp orange">
+                <p class="testimonials__text">
+                  "Their visual facilitation transformed our meetings into
+                  collaborative and productive sessions. We saw an immediate
+                  improvement in our team’s engagement!"
+                </p>
+                <div class="divtestimonials__signature">
+                  <h3 class="testimonials__text-title">David Letterman</h3>
+                  <p class="testimonials__job-title">
+                    HR Director, Company Name
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./../img/testimonials-slider/testimonial-photo-1.jpg"
+                alt="testimonial-photo"
+                width="420"
+                height="540"
+                loading="lazy"
+              />
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonials__text-wrapp teal">
+                <p class="testimonials__text">
+                  "In every project, they bring our vision to life with clarity
+                  and creativity. Our team walks away with a deeper
+                  understanding and actionable insights."
+                </p>
+                <div class="divtestimonials__signature">
+                  <h3 class="testimonials__text-title">Jessica Masters</h3>
+                  <p class="testimonials__job-title">
+                    Event Coordinator, Company Name
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./../img/testimonials-slider/testimonial-photo-2.jpg"
+                alt="testimonial-photo"
+                width="420"
+                height="540"
+                loading="lazy"
+              />
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonials__text-wrapp lime">
+                <p class="testimonials__text">
+                  "Professional, innovative, and genuinely invested in our
+                  success. Their guidance helped us communicate complex ideas in
+                  a way that truly resonates."
+                </p>
+                <div class="divtestimonials__signature">
+                  <h3 class="testimonials__text-title">Samantha Kane</h3>
+                  <p class="testimonials__job-title">
+                    Project Manager, Company Name
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./../img/testimonials-slider/testimonial-photo-3.jpg"
+                alt="testimonial-photo"
+                width="420"
+                height="540"
+                loading="lazy"
+              />
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonials__text-wrapp pink">
+                <p class="testimonials__text">
+                  "In every project, they bring our vision to life with clarity
+                  and creativity. Our team walks away with a deeper
+                  understanding and actionable insights."
+                </p>
+                <div class="divtestimonials__signature">
+                  <h3 class="testimonials__text-title">Jessica Masters</h3>
+                  <p class="testimonials__job-title">
+                    Event Coordinator, Company Name
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./../img/testimonials-slider/testimonial-photo-4.jpg"
+                alt="testimonial-photo"
+                width="420"
+                height="540"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+			<section class="calendar">
+			<div class="container">
+				<div class="calendar__header">
+				
+					<h2 class='calendar__title animated'>
+						<span>Book a call with us</span>
+						<svg width="428" height="57" viewBox="0 0 428 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.5 44.3034C37.5 19.3034 112.5 -6.69664 105 4.80336C97.5 16.3034 42 32.8037 53 40.3037C64 47.8037 228 21.8037 253.5 16.3037C279 10.8037 166.5 40.3037 195.5 40.3037C224.5 40.3037 314 31.3037 337.5 28.8037C361 26.3037 350.5 37.3037 322.5 47.3037C294.5 57.3037 323.5 55.3037 352.5 53.3037C375.7 51.7037 410.833 46.637 425.5 44.3037" stroke="#62D9CF" stroke-width="4" stroke-linecap="round" stroke-dasharray="800"
+                stroke-dashoffset="800"/>
+</svg>
+
+						</h2>
+					<div class="calendar__right-block">
+						<p class='calendar__text'>Or use contact form to connect with us</p>
+						<button class='calendar__button btn white'><span>Connect with us</span>
+						</button>
+					</div>
+				</div>
+				<div class="calendar__body"></div>
+			</div>
+		</section>
+    </main>
+    //= parts/footer
+    <!-- . -->
+    //= parts/script
+  </body>
+</html>
