@@ -3,8 +3,15 @@ const animationDuration = 2;
 const tl = gsap.timeline();
 
 tl.to('.hero__animation-block', {
-  '--progress': 1,
-  '--rotate': 0,
+  x: (i, target) =>
+    `calc(100vw * (1 - ${getComputedStyle(target).getPropertyValue(
+      '--progress',
+    )}))`,
+  y: (i, target) =>
+    `calc(40% * (1 - ${getComputedStyle(target).getPropertyValue(
+      '--progress',
+    )}))`,
+  rotate: 0,
   duration: 3,
   ease: 'power2.out',
 });
