@@ -5282,33 +5282,9 @@ main {
 }
 /*# sourceMappingURL=homepage.css.map */
 
-.hero__animation-block {
-  /* will-change: transform;
-  transform: translate3d(0, 0, 0); */
-}
-.hero__animation-block g {
+/* .hero__animation-block g {
   position: relative;
 }
 .hero__animation-block path {
   position: relative;
-}
-.hero__animation-block .left {
-  /* --progress: 1;
-  --scale: 1; */
-  /* -webkit-transform: translate(
-      calc(12.1875rem * (var(--progress))),
-      calc(-22.75rem * (var(--progress)))
-    )
-    scale(var(--scale));
-  -ms-transform: translate(
-      calc(12.1875rem * (var(--progress))),
-      calc(-22.75rem * (var(--progress)))
-    )
-    scale(var(--scale));
-  transform: translate(
-      calc(12.1875rem * (var(--progress))),
-      calc(-22.75rem * (var(--progress)))
-    ) */
-  /* scale(var(--scale)); */
-  transform: unset;
-}
+} */
