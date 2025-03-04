@@ -10,25 +10,24 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500..700&family=Kalam&family=Sora:wght@600&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-	<script>
-		function iOS() {
-			return [
-				'iPad Simulator',
-				'iPhone Simulator',
-				'iPod Simulator',
-				'iPad',
-				'iPhone',
-				'iPod'
-			].includes(navigator.platform)
-				|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)
-		}
-		if (iOS()) {
-			document.body.classList.add("ios-device");
-		}
-	</script>
+
 </head>
 
 <body>
+	<script>
+		function iOS() {
+			return /iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+				(navigator.userAgent.includes("Mac") && "ontouchend" in document);
+		}
+
+		if (iOS()) {
+			document.body.classList.add("ios-device");
+			console.log("iOS detected, class added!");
+		} else {
+			console.log("Not iOS:", navigator.userAgent);
+		}
+
+	</script>
 	<header class="header">
 		<div class="wrapper">
 			<div class="header__box">
