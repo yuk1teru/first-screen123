@@ -3076,6 +3076,7 @@ main {
 }
 .hero__animation-block .left {
   transform: translateZ(0);
+	will-change: transform;
   --progress: 1;
   --scale: 1;
   /* -webkit-transform: translate(
