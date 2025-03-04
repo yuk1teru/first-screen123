@@ -44,11 +44,12 @@ const elements = [
 ];
 
 tl.to(
-  elements.map(el => `.hero__animation-block ${el.selector}`),
+  elements.map(el => el.selector),
   {
-    '--progress': 0,
-    '--scale': i => elements[i].scale,
-    duration: animationDuration,
+    x: i => elements[i].x,
+    // y: i => elements[i].y,
+    // scale: i => elements[i].scale,
+    duration: 2,
     ease: 'power2.out',
   },
 );
