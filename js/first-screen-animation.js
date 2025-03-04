@@ -42,17 +42,42 @@ const elements = [
   { selector: '.right-top-beige', scale: 1.44, x: -283, y: 193 },
   { selector: '.right-dark-teal', scale: 1.44, x: -283, y: 134 },
 ];
-
 tl.to(
   elements.map(el => el.selector),
   {
-    x: i => elements[i].x,
-    // y: i => elements[i].y,
-    // scale: i => elements[i].scale,
+    x: (i, target) => gsap.getProperty(target, 'x') + elements[i].x,
+    y: (i, target) => gsap.getProperty(target, 'y') + elements[i].y,
+    scale: i => elements[i].scale,
     duration: 2,
     ease: 'power2.out',
   },
 );
+
+// tl.to(
+//   elements.map(el => el.selector),
+//   {
+//     x: (i, target) => {
+//       if (i === 1) {
+//         console.log(
+//           `calc(${elements[i].x}px * ( ${getComputedStyle(
+//             target,
+//           ).getPropertyValue('--progress')}))`,
+//         );
+//       }
+
+//       return `calc(${elements[i].x}px * (1 - ${getComputedStyle(
+//         target,
+//       ).getPropertyValue('--progress')}))`;
+//     },
+//     y: (i, target) =>
+//       `calc(${elements[i].y}px * (1 - ${getComputedStyle(
+//         target,
+//       ).getPropertyValue('--progress')}))`,
+//     scale: i => elements[i].scale,
+//     duration: 2,
+//     ease: 'power2.out',
+//   },
+// );
 
 tl.to(
   '.hero__animation-block .connect',
