@@ -42,28 +42,20 @@ const elements = [
   { selector: '.right-top-beige', scale: 1.44, x: -283, y: 193 },
   { selector: '.right-dark-teal', scale: 1.44, x: -283, y: 134 },
 ];
+tl.to(
+  elements.map(el => el.selector),
+  {
+    x: (i, target) => {
+      console.log(gsap.getProperty(target, 'x') + elements[i].x);
 
-elements.forEach(el => {
-  const target = document.querySelector(el.selector);
-  if (target) {
-    const moveX = gsap.quickTo(target, 'x', {
-      duration: 2,
-      ease: 'power2.out',
-    });
-    const moveY = gsap.quickTo(target, 'y', {
-      duration: 2,
-      ease: 'power2.out',
-    });
-    const scale = gsap.quickTo(target, 'scale', {
-      duration: 2,
-      ease: 'power2.out',
-    });
-
-    moveX(el.x);
-    moveY(el.y);
-    scale(el.scale);
-  }
-});
+      return gsap.getProperty(target, 'x') + elements[i].x;
+    },
+    y: (i, target) => gsap.getProperty(target, 'y') + elements[i].y,
+    scale: i => elements[i].scale,
+    duration: 2,
+    ease: 'power2.out',
+  },
+);
 
 // tl.to(
 //   elements.map(el => el.selector),
