@@ -65,9 +65,10 @@
 
     --progress: 0;
     --rotate: -15;
-    transform: translate(
+    transform: translate3d(
         calc(100vw * (1 - var(--progress, 0))),
-        calc(40% * (1 - var(--progress, 0)))
+        calc(40% * (1 - var(--progress, 0))),
+        0
       )
       rotate(calc(var(--rotate) * 1deg));
 

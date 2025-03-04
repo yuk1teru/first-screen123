@@ -3,9 +3,8 @@ const animationDuration = 2;
 const tl = gsap.timeline();
 
 tl.to('.hero__animation-block', {
-  xPercent: 100,
-  yPercent: 40,
-  rotate: 0,
+  '--progress': 1,
+  '--rotate': 0,
   duration: 3,
   ease: 'power2.out',
 });
