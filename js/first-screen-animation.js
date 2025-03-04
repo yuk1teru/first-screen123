@@ -45,11 +45,10 @@ const elements = [
 tl.to(
   elements.map(el => el.selector),
   {
-    x: (i, target) => {
-      console.log(gsap.getProperty(target, 'x') + elements[i].x);
-
-      return gsap.getProperty(target, 'x') + elements[i].x;
-    },
+    x: (i, target) =>
+      `calc(40% * (1 - ${getComputedStyle(target).getPropertyValue(
+        '--progress',
+      )}))`,
     y: (i, target) => gsap.getProperty(target, 'y') + elements[i].y,
     scale: i => elements[i].scale,
     duration: 2,
