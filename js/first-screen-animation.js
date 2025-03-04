@@ -50,7 +50,7 @@ tl.to(
         '--progress',
       )}))`,
     y: (i, target) => gsap.getProperty(target, 'y') + elements[i].y,
-    scale: i => elements[i].scale,
+    // scale: i => elements[i].scale,
     duration: 2,
     ease: 'power2.out',
   },
