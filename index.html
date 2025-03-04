@@ -10,6 +10,22 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500..700&family=Kalam&family=Sora:wght@600&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script>
+		function iOS() {
+			return [
+				'iPad Simulator',
+				'iPhone Simulator',
+				'iPod Simulator',
+				'iPad',
+				'iPhone',
+				'iPod'
+			].includes(navigator.platform)
+				|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+		}
+		if (iOS()) {
+			document.body.classList.add("ios-device");
+		}
+	</script>
 </head>
 
 <body>
@@ -148,7 +164,8 @@
 				</p>
 				<div class="hero__animation-block">
 					<img class='left' src='./img/test.png' alt='' width='' height='' loading='lazy'>
-					<div class='main-animation'><svg width="931" height="958" viewBox="0 0 931 958" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<div class='main-animation'>
+						<svg width="931" height="958" viewBox="0 0 931 958" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path class='right-center-orange' d="M741 361.332C741 384.47 723.417 406 699.993 406C676.568 406 650 382.525 650 359.393C650 336.261 682.75 320 706.167 320C729.585 320 740.993 338.2 740.993 361.338L741 361.332Z" fill="#EF6343" />
 							<path class='bottom-center-teal' d="M644.537 762.604C644.537 781.005 630.39 799 611.894 799C593.398 799 586 772.04 586 753.639C586 735.238 611.968 715 630.463 715C648.959 715 644.537 744.196 644.537 762.597V762.604Z" fill="#2CB5A9" />
 							<path class='top-potato' d="M379.34 66.8695C379.34 92.7185 359.194 118 332.864 118C306.534 118 296 80.1273 296 54.2783C296 28.4293 332.978 0 359.309 0C385.639 0 379.34 41.0139 379.34 66.8695Z" fill="#AF9F6E" />
@@ -834,7 +851,8 @@
 								<path d="M591.005 524.255C591.1 524.114 591.146 523.968 591.211 523.822C591.116 524.013 591 524.165 590.874 524.346C590.737 524.507 590.657 524.628 590.667 524.644C590.732 524.618 590.833 524.543 591.01 524.26L591.005 524.255Z" fill="white" />
 								<path d="M589.971 531.359C590.198 531.455 590.511 531.566 590.627 531.596C590.798 531.641 590.551 531.53 590.238 531.389C589.87 531.233 589.659 531.157 589.588 531.152C589.517 531.147 589.603 531.208 589.971 531.359Z" fill="white" />
 							</g>
-						</svg></div>
+						</svg>
+					</div>
 
 					<div class="connect">
 						<svg width="711" height="732" viewBox="0 0 711 732" fill="none" xmlns="http://www.w3.org/2000/svg">

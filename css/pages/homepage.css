@@ -5287,3 +5287,7 @@ main {
 .hero__animation-block path {
   position: relative;
 }
+
+body.ios-device {
+  background-color: red !important;
+}
