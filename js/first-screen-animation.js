@@ -46,8 +46,9 @@ const elements = [
 tl.to(
   elements.map(el => `.hero__animation-block ${el.selector}`),
   {
-    '--progress': 0,
-    '--scale': i => elements[i].scale,
+    xPercent: 100, // Замість `calc(100vw * (1 - var(--progress)))`
+    yPercent: 40, // Замість `calc(40% * (1 - var(--progress)))`
+    scale: i => elements[i].scale, // Використовуємо `scale` напряму
     duration: animationDuration,
     ease: 'power2.out',
   },
