@@ -5283,8 +5283,8 @@ main {
 /*# sourceMappingURL=homepage.css.map */
 
 .hero__animation-block {
-  will-change: transform;
-  transform: translate3d(0, 0, 0);
+  /* will-change: transform;
+  transform: translate3d(0, 0, 0); */
 }
 .hero__animation-block g {
   position: relative;
